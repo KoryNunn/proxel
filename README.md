@@ -4,7 +4,7 @@ Proxy model - Experimental Proxy-based evented data-store.
 
 # Example
 
-```
+```javascript
 var data = proxel({
     foo: 5
 });
