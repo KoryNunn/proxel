@@ -1,0 +1,30 @@
+{
+  "name": "proxel",
+  "version": "1.0.0",
+  "description": "Proxy model - Experimental Proxy-based evented data-store.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test; npm run testMemory; npm run testCpu",
+    "testMemory": "node --expose-gc ./test/memory",
+    "testCpu": "node ./test/cpu"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "is-instance": "^1.0.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "tape": "^4.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/proxel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/proxel/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/proxel#readme"
+}
