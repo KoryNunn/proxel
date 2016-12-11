@@ -1,6 +1,6 @@
 {
   "name": "proxel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Proxy model - Experimental Proxy-based evented data-store.",
   "main": "index.js",
   "scripts": {
