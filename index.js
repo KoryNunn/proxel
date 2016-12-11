@@ -14,17 +14,22 @@ function set(target, name, value){
 
     var previous = context.data[name];
     context.data[name] = value;
-    context.events.forEach(function(eventInfo){
-        var eventName = eventInfo[0];
 
-        if(eventName instanceof RegExp){
-            if(name.match(eventName)){
+    if(context.events){
+        context.events.forEach(function(eventInfo){
+            var eventName = eventInfo[0];
+
+            if(eventName instanceof RegExp){
+                if(name.match(eventName)){
+                    eventInfo[1](value, previous);
+                }
+            }else if(String(eventName) === name){
                 eventInfo[1](value, previous);
             }
-        }else if(String(eventName) === name){
-            eventInfo[1](value, previous);
-        }
-    });
+        });
+    }
+
+    return value;
 }
 
 function wrap(data) {

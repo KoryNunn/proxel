@@ -85,3 +85,19 @@ test('any regex', function(t){
     data.bar = 10;
     data.bfo = 10;
 });
+
+
+test('Just assign, no listeners', function(t){
+    t.plan(2);
+
+    var data = proxel({
+        foo: 5
+    });
+
+    t.equal(data.foo, 5);
+
+    data.foo = 10;
+
+    t.equal(data.foo, 10);
+
+});
